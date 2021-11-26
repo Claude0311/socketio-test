@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <script>
+    const socket = io("ws://localhost:8001");
+
+    socket.on('connect', () => {
+    // $events.appendChild(newItem('connect'));
+    });
+
+    let counter = 0;
+    setInterval(() => {
+    ++counter;
+    socket.emit('hey', { counter }); // the object will be serialized for you
+    }, 1000);
+    </script>
+    <div>This is our socket.html file</div>
+  </body>
+</html>
