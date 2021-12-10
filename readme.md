@@ -5,10 +5,12 @@ yarn
 
 2. open socket server
 ```
-node server.js
+yarn build
+yarn start
 ```
+then open [client](http://localhost:3000)
 
-3. open client
+3. open python client
 ```
 python client.py
 ```
